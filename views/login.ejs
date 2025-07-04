@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #login-container {
+            padding: 80px;
+            border-radius: 8px;
+            background-color: blue;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: whitesmoke;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: whitesmoke;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="login-container">
+        <h2>Enter your password to continue</h2>
+        <form action="/login" method="POST">
+            <input type="password" name="password" placeholder="Enter your password" required />
+            <button type="submit">View Message</button>
+        </form>
+    </div>
+    
+</body>
+</html>
