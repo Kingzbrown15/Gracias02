@@ -16,7 +16,9 @@ app.set("views", path.join(_dirname, "views"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const filePath = process.env.RENDER ? "/var/render/secrets/data.json"  : "data.json";
 const users = JSON.parse(fs.readFileSync("data.json", "utf8"));
+
 
 app.get("/", (req, res) => {
     res.render("login");
